@@ -1,0 +1,156 @@
+﻿/*#region ==================== Fonts ==================== */
+@font-face {
+    font-family: 'Quicksand-Bold';
+    src: url('/cp/fonts/Quicksand/Quicksand-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Quicksand-Light';
+    src: url('/cp/fonts/Quicksand/Quicksand-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Quicksand-Medium';
+    src: url('/cp/fonts/Quicksand/Quicksand-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Quicksand-Regular';
+    src: url('/cp/fonts/Quicksand/Quicksand-Regular.ttf') format('truetype');
+}
+/*#endregion*/
+
+/*#region ==================== Variables ==================== */
+/*#region Fonts */
+$quicksan-light: 'Quicksand-Light';
+$quicksan-regular: 'Quicksand-Regular';
+$quicksan-medium: 'Quicksand-Medium';
+$quicksan-bold: 'Quicksand-Bold';
+/*#endregion*/
+
+/*#region Colors */
+$error-color: #e0435e;
+
+$info-color: #c695db;
+$info-hover-color: #9b57c1;
+
+$primary-color: #5b899b;
+$primary-hover-color: #345d7c;
+
+$success-color: #8ab446;
+$success-hover-color: #566f0c; 
+
+$main-blue-regular: #4996b3;
+$main-blue-dark: #203c4b;
+
+$hover-blue: #bdd8e8;
+
+$pagination-hover-blue: #002447;
+/*#endregion*/
+/*#endregion*/
+/*#region ==================== Page Layout ==================== */
+@mixin center-item($horizontal, $vertical) {
+    display: flex;
+    align-items: $vertical;
+    justify-content: $horizontal;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content
+    }
+
+    &:-moz-placeholder {
+        @content
+    }
+
+    &::-moz-placeholder {
+        @content
+    }
+
+    &:-ms-input-placeholder {
+        @content
+    }
+}
+
+body {
+    font-family: $quicksan-regular;
+}
+
+.full-width {
+    width: 100%;
+}
+
+#updated-date {
+    font-weight: 700;
+    color: $error-color;
+}
+/*#endregion*/
+
+/*#region ==================== Button ==================== */
+.btn {
+    @extend .no-outline;
+    border-radius: 0;
+}
+
+.btn-primary {
+    background-color: $primary-color;
+    border: $primary-color;
+
+    &:hover, &:focus, &:active, &:active:focus, &:active:hover {
+        background-color: $primary-hover-color;
+        border: $primary-hover-color;
+    }
+}
+
+.btn-info {
+    background-color: $info-color;
+    border: $info-color;
+
+    &:hover, &:focus, &:active, &:active:focus, &:active:hover {
+        background-color: $info-hover-color;
+        border: $info-hover-color;
+    }
+}
+
+.btn-danger {
+    background-color: $error-color;
+    border: $error-color;
+}
+
+.btn-success {
+    background-color: $success-color;
+    border: $success-color;
+
+    &:hover, &:focus, &:active, &:active:focus, &:active:hover {
+        background-color: $success-hover-color;
+        border: $success-hover-color;
+    }
+}
+/*#endregion*/
+
+/*#region ==================== Link ==================== */
+a {
+    @extend .no-underline;
+}
+/*#endregion*/
+
+/*#region ==================== Textbox ==================== */
+input {
+    @extend .no-outline;
+}
+/*#endregion*/
+
+/*#region ==================== Hover, Active, Focus Button, Link, TextBox ==================== */
+.no-underline {
+    &:hover, &:active, &:focus, &:active:focus, &:active:hover {
+        text-decoration: none;
+    }
+}
+
+.no-outline {
+    &:hover, &:active, &:focus, &:active:focus, &:active:hover {
+        outline: none;
+    }
+}
+/*#endregion*/

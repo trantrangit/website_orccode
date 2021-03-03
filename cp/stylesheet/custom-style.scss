@@ -1,0 +1,21 @@
+﻿@import "partials/base";
+
+/*#region Table */
+.sub-table {
+    display: none;
+
+    .header {
+        font-weight: 700;
+        color: $error-color;
+    }
+
+    img {
+        width: 200px;
+    }
+}
+
+.break-word {
+    word-break: break-all;
+    width: 400px;
+}
+/*#endregion*/

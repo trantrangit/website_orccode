@@ -1,0 +1,146 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="cp_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Simple Admin Control</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/cp/images/favicon.png" rel="shortcut icon" />
+
+    <!-- jQuery -->
+    <script src="/cp/plugins/jquery/jquery-2.2.4.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="/cp/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="/cp/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Fontawesome -->
+    <script src="/cp/plugins/fontawesome/fontawesome-all.min.js"></script>
+
+    <!-- AlertifyJS -->
+    <link href="/cp/plugins/alertify/css/alertify.min.css" rel="stylesheet" />
+    <link href="/cp/plugins/alertify/css/themes/default.min.css" rel="stylesheet" />
+    <script src="/cp/plugins/alertify/alertify.min.js"></script>
+
+    <!-- TinyMCE -->
+    <script src="/cp/plugins/tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: "textarea.tinymce",
+            theme: "modern",
+            height: 300,
+            plugins: [
+                "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker", "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking", "save table contextmenu directionality emoticons template paste textcolor"
+            ],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons",
+        });
+    </script>
+
+    <!-- Scroll top -->
+    <link href="/cp/plugins/scroll-top/image.css" rel="stylesheet" />
+    <script src="/cp/plugins/scroll-top/jquery.scrollUp.js"></script>
+
+    <!-- Loading CSS -->
+    <link href="/cp/css/loading.css" rel="stylesheet" />
+    <link href="/cp/css/small-loading.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="/cp/stylesheet/main.min.css" rel="stylesheet" />
+    <link href="stylesheet/custom-style.min.css" rel="stylesheet" />
+    
+    <!-- Custom JS -->
+    <script src="/cp/js/effect.js"></script>
+    <script src="/cp/js/check-exception.js"></script>
+    <script src="/cp/js/handle.js"></script>
+
+    <!-- Pagination -->
+    <script src="/cp/js/pagination.js"></script>
+
+    <!-- Bootstrap datetime picker -->
+    <script src="/cp/plugins/bootstrap-datetime-picker/moment.min.js"></script>
+    <script src="/cp/plugins/bootstrap-datetime-picker/bootstrap-datetimepicker.min.js"></script>
+    <link href="/cp/plugins/bootstrap-datetime-picker/css/bootstrap-datetimepicker-build.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Navbar -->
+      
+            <div id="navbar">
+                <div id="user-info-box">
+                    <img src="/cp/images/default-avatar.jpg" class="img-circle" />
+                    <p>Orccode admin</p>
+                    <i class="fas fa-chevron-circle-down"></i>
+                </div>
+                <!-- Info box -->
+                <div id="user-detail">
+                    <div id="info">
+                        <img src="/cp/images/default-avatar.jpg" class="img-rounded" />
+                        <div>
+                            <h4>OrccodeAdmin</h4>
+                            <p class="user-email">admin@admin.com</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div>
+                        <button onclick="Logout()">
+                            <i class="fas fa-power-off"></i>Logout
+                        </button>
+                    </div>
+                </div>
+                <!-- ./Info box -->
+            </div>
+       
+         
+
+        <!-- ./Navbar -->
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="logo">
+                <a href="/admin-default">
+                    <img src="/cp/images/logo.jpg" class="img-responsive center-block" />
+                </a>
+            </div>
+            <div class="menu">
+                <ul class="main-menu">
+                        <li><a href="/cp-category"><i class="fas fa-cubes"></i>category</a></li>
+                        <li><a href="/cp-service"><i class="fas fa-handshake "></i>Service</a></li>
+                        <li><a href="/cp-banner"><i class="fas fa-images "></i>Banner</a></li>
+                    <li><a href="/cp-contact"><i class="fas fa-credit-card "></i>Contact</a></li>
+                  
+                     
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- ./Sidebar -->
+        <!-- Page content -->
+        <div id="page-content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <!-- Footer -->
+            <footer class="row">
+                <p class="text-center">
+                    Copyright <i class="fas fa-copyright"></i> 2018. Orc Code Co.
+                </p>
+            </footer>
+            <!-- ./Footer -->
+        </div>
+        <!-- ./Page content -->
+    </div>
+
+    <!-- Loading -->
+    <div id="loading-screen">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div>
+    <!-- ./Loading -->
+</body>
+</html>

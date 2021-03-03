@@ -1,0 +1,93 @@
+﻿/*#region ==================== Fonts ==================== */
+@font-face {
+  font-family: 'Quicksand-Bold';
+  src: url("/cp/fonts/Quicksand/Quicksand-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Quicksand-Light';
+  src: url("/cp/fonts/Quicksand/Quicksand-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Quicksand-Medium';
+  src: url("/cp/fonts/Quicksand/Quicksand-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Quicksand-Regular';
+  src: url("/cp/fonts/Quicksand/Quicksand-Regular.ttf") format("truetype"); }
+
+/*#endregion*/
+/*#region ==================== Variables ==================== */
+/*#region Fonts */
+/*#endregion*/
+/*#region Colors */
+/*#endregion*/
+/*#endregion*/
+/*#region ==================== Page Layout ==================== */
+body {
+  font-family: "Quicksand-Regular"; }
+
+.full-width {
+  width: 100%; }
+
+#updated-date {
+  font-weight: 700;
+  color: #e0435e; }
+
+/*#endregion*/
+/*#region ==================== Button ==================== */
+.btn {
+  border-radius: 0; }
+
+.btn-primary {
+  background-color: #5b899b;
+  border: #5b899b; }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:active:focus, .btn-primary:active:hover {
+    background-color: #345d7c;
+    border: #345d7c; }
+
+.btn-info {
+  background-color: #c695db;
+  border: #c695db; }
+  .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info:active:focus, .btn-info:active:hover {
+    background-color: #9b57c1;
+    border: #9b57c1; }
+
+.btn-danger {
+  background-color: #e0435e;
+  border: #e0435e; }
+
+.btn-success {
+  background-color: #8ab446;
+  border: #8ab446; }
+  .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success:active:focus, .btn-success:active:hover {
+    background-color: #566f0c;
+    border: #566f0c; }
+
+/*#endregion*/
+/*#region ==================== Link ==================== */
+/*#endregion*/
+/*#region ==================== Textbox ==================== */
+/*#endregion*/
+/*#region ==================== Hover, Active, Focus Button, Link, TextBox ==================== */
+.no-underline:hover, a:hover, .no-underline:active, a:active, .no-underline:focus, a:focus, .no-underline:active:focus, a:active:focus, .no-underline:active:hover, a:active:hover {
+  text-decoration: none; }
+
+.no-outline:hover, .btn:hover, input:hover, .no-outline:active, .btn:active, input:active, .no-outline:focus, .btn:focus, input:focus, .no-outline:active:focus, .btn:active:focus, input:active:focus, .no-outline:active:hover, .btn:active:hover, input:active:hover {
+  outline: none; }
+
+/*#endregion*/
+/*#region Table */
+.sub-table {
+  display: none; }
+  .sub-table .header {
+    font-weight: 700;
+    color: #e0435e; }
+  .sub-table img {
+    width: 200px; }
+
+.break-word {
+  word-break: break-all;
+  width: 400px; }
+
+/*#endregion*/
+

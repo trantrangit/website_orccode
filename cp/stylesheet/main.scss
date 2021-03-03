@@ -1,0 +1,375 @@
+﻿@import "partials/base";
+
+/*#region ==================== DESKTOP ==================== */
+/*#region Sidebar */
+#sidebar {
+    width: 250px;
+    background-color: $main-blue-regular;
+    height: 100%;
+    border-right: 1px solid $main-blue-regular;
+    float: left;
+    position: fixed;
+
+    .logo {
+        background: #fff;
+        height: 50px;
+
+        padding: {
+            top: 5px;
+            bottom: 5px;
+        }
+
+        img {
+            width: 35%;
+			height:40px;
+        }
+    }
+
+    .menu {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            &.main-menu {
+                li {
+                    height: 50px;
+                    cursor: pointer;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        color: #fff;
+                        padding-left: 40px;
+                        @extend .no-underline;
+
+                        svg {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    &:hover, &.active {
+                        background: $main-blue-dark;
+                    }
+
+                    &.dropdown-li {
+                        position: relative;
+                        display: block;
+
+                        .dropdown-arrow {
+                            position: absolute;
+                            top: 15px;
+                            right: 15px;
+
+                            .fa-caret-up {
+                                display: none;
+                            }
+
+                            &.active {
+                                .fa-caret-up {
+                                    display: block;
+                                }
+
+                                .fa-caret-down {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .sub-menu {
+                            position: relative;
+                            display: none;
+
+                            li {
+                                padding-left: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*#endregion*/
+
+/*#region Navbar */
+#navbar {
+    left: 250px;
+    height: 51px;
+    border-bottom: 1px solid $main-blue-regular;
+    position: absolute;
+    top: 0;
+    width: calc(100% - 250px);
+
+    #user-info-box {
+        @include center-item(null, center);
+        cursor: pointer;
+        height: 50px;
+        width: fit-content;
+        float: right;
+        padding-left: 10px;
+
+        img {
+            height: 45px;
+        }
+
+        p {
+            margin: {
+                bottom: 0;
+                left: 10px;
+                right: 10px;
+            }
+        }
+
+        svg {
+            font-size: 16px;
+            margin-right: 20px;
+        }
+
+        &:hover {
+            background: $hover-blue;
+        }
+    }
+
+    #user-detail {
+        position: absolute;
+        right: 5px;
+        top: 51px;
+        width: 252px;
+        -webkit-box-shadow: 0px 0px 10px 5px rgba(239,239,239,1);
+        -moz-box-shadow: 0px 0px 10px 5px rgba(239,239,239,1);
+        box-shadow: 0px 0px 10px 5px rgba(239,239,239,1);
+        padding: 10px;
+        display: none;
+        z-index: 100;
+        background: #fff;
+
+        p {
+            margin: 0;
+
+            &.user-email {
+                word-break: break-word;
+                font-size: 12px;
+            }
+        }
+
+        #info {
+            @include center-item(center, center);
+
+            img {
+                height: 80px;
+                margin-right: 15px;
+            }
+        }
+
+        button {
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            @extend .no-outline;
+
+            svg {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+/*#endregion*/
+
+/*#region Page content */
+#page-content {
+    top: 50px;
+    float: left;
+    position: relative;
+    width: calc(100% - 250px);
+    left: 250px;
+    padding-bottom: 30px;
+
+    .page-title-container {
+        margin: {
+            top: 25px;
+            bottom: 25px;
+        }
+
+        .page-title {
+            font-family: $quicksan-bold;
+        }
+    }
+
+    .page-control-container {
+        margin-bottom: 20px;
+    }
+}
+/*#endregion*/
+
+/*#region Pagination */
+#pagination {
+    padding: 5px 15px 0;
+
+
+    ul {
+        padding-left: 0;
+        list-style: none;
+        @include center-item(null, center);
+
+        li {
+            padding: 5px 10px;
+            margin-right: 5px;
+            background: $primary-color;
+            border: 1px solid $primary-color;
+            cursor: pointer;
+            min-width: 35px;
+            text-align: center;
+
+            &:hover {
+                background: $primary-hover-color;
+                border: 1px solid $primary-hover-color;
+            }
+
+            &#first-page, &#last-page {
+                display: none;
+            }
+
+            &.active {
+                min-width: 40px;
+                padding: 0;
+                height: 40px;
+                @include center-item(center, center);
+                background: $pagination-hover-blue;
+                border: 1px solid $pagination-hover-blue;
+            }
+
+            a {
+                color: #fff;
+                @extend .no-underline;
+            }
+        }
+    }
+}
+/*#endregion*/
+
+/*#region Login Page */
+#login-container {
+    background: url('/cp/images/login-background.jpg') 0 0 / 100% 100% no-repeat;
+    @include center-item(center, center);
+    @extend .full-width;
+
+    .overlay {
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        @extend .full-width;
+    }
+
+    #login-form, #forgot-password-form {
+        position: absolute;
+        background: #fff;
+        padding: 50px 100px;
+    }
+
+    #forgot-password-form {
+        display: none;
+    }
+}
+/*#endregion*/
+
+/*#region Form Input */
+.form {
+    margin-bottom: 20px;
+
+    #header-title {
+        margin: 0;
+        font-weight: 700;
+    }
+
+    label {
+        display: block;
+    }
+
+    input, textarea, select {
+        border: 1px solid #ccc;
+        padding: 10px;
+        @extend .no-outline, .full-width;
+
+        &:hover, &:focus, &:active {
+            border: 1px solid #000;
+        }
+
+        &.error {
+            border: 1px solid $error-color;
+            color: $error-color;
+            font-weight: 700;
+
+            @include placeholder {
+                color: $error-color;
+                font-weight: 700;
+            }
+
+            &:hover {
+                border: 1px solid $error-color;
+            }
+        }
+    }
+}
+
+.search-box-container {
+    float: right;
+    position: relative;
+    width: 295px;
+
+    input {
+        border-radius: 50px;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        width: 100%;
+        @extend .no-outline;
+    }
+
+    span {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+    }
+}
+/*#endregion*/
+
+/*#region Breadcrumbs */
+.page-breadcrumb {
+    list-style: none;
+    padding: 10px 20px;
+    background: #eaeef4;
+    margin-top: 10px;
+
+    li {
+        display: inline;
+
+        a {
+            color: $primary-hover-color;
+            font-weight: 700;
+            @extend .no-underline;
+        }
+
+        & + li:before {
+            padding: 8px;
+            color: black;
+            font-family: "FontAwesome";
+            content: "\f105";
+        }
+    }
+}
+/*#endregion*/
+
+/*#region Footer */
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    p {
+        font-family: $quicksan-bold;
+    }
+}
+/*#endregion*/
+/*#endregion*/

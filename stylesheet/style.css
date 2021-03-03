@@ -1,0 +1,280 @@
+:root
+{
+    --bg-background:#1e9052;
+    --bg-background-gray:#40c17e;
+    --color:#fff;
+    --font-size:1.25em;
+
+}
+*, *:after, *:before
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.required-star
+{
+    color:#f00;
+}
+a, a:hover ,a:active ,a:visited
+{
+    text-decoration: none;
+}
+body
+{
+    font-size: var(--font-size);
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol;
+}
+.header-wrapper
+{
+    background: var(--bg-background);
+    height: 67px;
+
+}
+
+.header-wrapper a
+{
+    color: var(--color);
+}
+
+.parent-heard
+{
+    position: relative;
+    height: 67px;
+
+}
+.header-wrapper  .logo
+{
+    float: left;
+    display: inline-block;
+    height: inherit;
+
+}
+.header-wrapper  .logo img
+{
+    width: 150px;
+    max-width: 100%;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 0;
+
+}
+
+.header-wrapper  .menu-main .close-open
+{
+    opacity: 0;
+    font-size: calc(var(--font-size) + 1em);
+    display: block;
+}
+.header-wrapper  .menu-main ul
+{
+    list-style: none;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 0;
+    font-size: calc( var(--font-size) - 0.435em);
+
+}
+.header-wrapper  .menu-main ul li
+{
+
+    padding-left: 20px;
+}
+.header-wrapper .nav-open
+{
+    float: right;
+    opacity: 0;
+
+}
+.header-wrapper .nav-open i
+{
+    font-size: calc(var(--font-size) + 0.6em);
+}
+#ul-menu li a
+{
+    font-weight: bold;
+    text-decoration: none;
+
+}
+#ul-menu li:not(:last-child) a:hover
+{
+    color: #e78967;
+    text-decoration: none;
+}
+.icon-arrow
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:calc(100% + 50px);
+    font-size: calc(var(--font-size) + 0.6em);
+    animation: updown 1000ms ease;
+    animation-iteration-count: infinite;
+    transition: all 1000ms ease;
+}
+@keyframes updown {
+    0%
+    {
+        top:calc(100% + 45px);
+    }
+    50%
+    {
+        top:calc(100% + 50px);
+    }
+    100%
+    {
+        top:calc(100% + 45px);
+    }
+
+}
+.a-btn-orange
+{
+    background: #87e8b3;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding:15px;
+
+}
+.bg-logan
+{
+    width: 100%;
+    height: 900px;
+    max-height: 100%;
+    background:url("/images/home/hero-bg-2-2.png");
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-logan
+{
+
+    color: var(--color);
+    font-size: 63px;
+    font-weight: bold;
+    text-align: center;
+
+}
+.btn-let
+{
+    color:var(--bg-background);
+    background: #fff;
+    font-weight: bold;
+}
+.sec-texas
+{
+    background: #f3f5fa;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.text-texas
+{
+    color:#e78967 ;
+    text-align: center;
+
+}
+.context-address a
+{
+    color:#000;
+}
+/*.sec-texas .container
+{
+    position:absolute ;
+    left: 50%;
+    top:50%;
+    transform: translate(-50% , -50%);
+}*/
+.sec-content article
+{
+    padding: 60px 0;
+}
+.grid-howdy img
+{
+    max-width:100%;
+    width:200px;
+    max-height:auto;
+    object-fit: cover;
+}
+.sec-content .img-content img
+{
+    max-width:100%;
+    width:540px;
+    height:362px;
+    max-height:auto;
+    object-fit: cover;
+}
+.sec-content article:nth-child(2),  .sec-content article:nth-child(4), .sec-content article:nth-child(6)
+{
+    background: #f3f5fa;
+
+
+}
+.title-content
+{
+    color: #e78967;
+    font-weight: bold;
+    font-size: calc(var(--font-size) + 1em);
+    text-align: center;
+}
+.img-how-it img
+{
+    width: 100px;
+    height: 100px;
+    max-height: 100%;
+    object-fit: cover;
+}
+.title-howit
+{
+    color: #e78967;
+    font-weight: bold;
+    text-align: center;
+}
+.sec-qoute
+{
+    background: url("/images/home/hero-bg-2-2.png");
+    height:900px;
+    max-height: 100%;
+    background-size: 100% 100%;
+    color: var(--color);
+
+}
+.grid-howdy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box-how-it
+{
+    position: relative;
+}
+.box-how-it > div:not(:last-child):after
+{
+    content: "\f061";
+    position: absolute;
+    font-family: FontAwesome;
+    z-index: 3;
+    top:10%;
+    right: 0;
+}
+footer
+{
+
+
+    background: #f3f5fa;
+    max-height: 100%;
+    font-size: calc(var(--font-size) - 0.5em);
+
+
+
+}
